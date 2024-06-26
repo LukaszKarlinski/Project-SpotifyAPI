@@ -13,10 +13,10 @@ const setUrl = (type, value) =>{
     const urlCore = 'https://api.spotify.com/v1/';
 
     if(type==='search'){
-        url = `${urlCore}/search?q=${value}&type=artist&market=PL&limit=1`;
+        url = `${urlCore}search?q=${value}&type=artist&market=PL&limit=1`;
     }
     else{
-        url = `${urlCore}/${type}/${value}`;
+        url = `${urlCore}${type}/${value}`;
     }
 
     return url;
