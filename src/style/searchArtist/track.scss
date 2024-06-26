@@ -1,0 +1,28 @@
+.trackWrap{
+    width: 40%;
+    height: 15%;
+    flex-grow: 1;
+    margin: 10px 10px;
+    display: flex;
+    color: green;
+    padding: 5px 10px;
+    border-radius: 10px;
+    transition: .3s;
+
+    img{
+        width: auto;
+    }
+
+    .trackInfoWrap{
+        margin-left: 10px;
+        h1{
+            font-size: 1.5rem;
+            font-weight: 600;
+            overflow: hidden;
+        }
+        p{
+            font-size: 1.3rem;
+        }
+    }
+    
+}

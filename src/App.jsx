@@ -1,7 +1,11 @@
+import SearchArtistPage from "./pages/SearchArtistPage"
+
 
 function App() {
   return (
-    <div></div>
+    <div>
+      <SearchArtistPage/>
+    </div>
   )
 }
 

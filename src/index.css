@@ -6,10 +6,15 @@
 
 html{
   font-size: 10px;
+  font-family: "Montserrat", sans-serif;
 }
 
 body{
   display: flex;
   justify-content: center;
   background-color: black;
+}
+
+#root{
+  width: 100%;
 }

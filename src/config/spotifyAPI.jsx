@@ -7,7 +7,7 @@ const authorization = {
     }
 }
 
-const setUrl = (type, value) =>{
+const setUrl = (type, value, options) =>{
 
     let url = '';
     const urlCore = 'https://api.spotify.com/v1/';
@@ -16,15 +16,18 @@ const setUrl = (type, value) =>{
         url = `${urlCore}search?q=${value}&type=artist&market=PL&limit=1`;
     }
     else{
-        url = `${urlCore}${type}/${value}`;
+        if(!options)
+            url = `${urlCore}${type}/${value}`;
+        else
+            url = `${urlCore}${type}/${value}/${options}`;
     }
 
     return url;
 }
 
-const fetchData = async (type, value) =>{
+const fetchData = async (type, value, options='') =>{
 
-    const url = setUrl(type, value);
+    const url = setUrl(type, value, options);
 
     try{
         const response = await fetch(url, authorization);
