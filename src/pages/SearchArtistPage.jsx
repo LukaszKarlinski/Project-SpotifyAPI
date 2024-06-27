@@ -3,6 +3,7 @@ import '../style/searchArtist/searchArtistPage.scss';
 import InputSearchArtist from '../components/searchArtist/InputSearchArtist';
 import ArtistData from '../components/searchArtist/ArtistData';
 import fetchData from '../config/spotifyAPI';
+import Menu from '../components/Menu';
 
 const SearchArtistPage = () =>{
 
@@ -39,6 +40,7 @@ const SearchArtistPage = () =>{
 
     return(
         <section className="wrapSearchArtistPage">
+            <Menu/>
             <InputSearchArtist setArtistData={setArtistData}/>
             <ArtistData artistData={artistData} albums={albums} topTracks={topTracks}/>
         </section>

@@ -1,0 +1,51 @@
+nav{
+    position: absolute;
+    top: 0;
+    left: 0;
+    margin-top: 50px;
+
+    ul{
+        list-style: none;
+        li{
+            display: flex;
+            width: fit-content;
+            font-size: 1.4rem;
+            font-weight: 700;
+            margin: 10px 0;
+            line-height: 50px;
+            letter-spacing: 2px;
+            text-transform: uppercase;
+            cursor: pointer;
+            height: 50px;
+            color:green;
+            background-color: black;
+            border-radius: 0 50px 50px 0;
+            transform: translateX(calc(-100% + 55px));
+            transition: .5s;
+            z-index: 10;
+            &:hover{
+                transform: translateX(0);
+                box-shadow: 3px 3px 5px 0 green;
+            }
+            
+
+
+            .iconWrap{
+                height: 100%;
+                margin: 0 15px 0 10px;
+                display: flex;
+                align-items: center;
+            }
+
+            a{  
+                display: block;
+                padding-left: 10px;
+                color: green;
+                text-decoration: none;
+                
+            }
+        }   
+    }
+
+
+}
