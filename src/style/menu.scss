@@ -45,6 +45,17 @@ nav{
                 
             }
         }   
+
+        li.selected{
+            background-color: green;
+            color: black;
+            &:hover{
+                transform: translateX(calc(-100% + 55px));
+            }
+            a{
+                color: black;
+            }
+        }
     }
 
 
