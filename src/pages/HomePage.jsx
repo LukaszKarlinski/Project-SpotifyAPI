@@ -3,7 +3,7 @@ import '../style/homePage/homePage.scss';
 import Header from '../components/homePage/Header'
 import TopTracks from '../components/homePage/TopTracks';
 import fetchData from '../config/spotifyAPI';
-
+import Reccomendation from '../components/homePage/Recommendation';
 import Menu from '../components/Menu';
 
 const HomePage = () =>{
@@ -45,14 +45,15 @@ const HomePage = () =>{
         <div className='homePageWrap'>
             <Menu/>
             <Header/>
-            <section className='popularSongs'>
+            <Reccomendation/>
+            <section className='popularSongs polish'>
                 <div className='popularSongsTitleWrap'>
                     <h3 className='market'>Polska</h3>
                     <h3 className='description'>najpopularniejsze utwory tygodnia</h3>
                 </div>
                 <TopTracks tracks={popularPolish}/>
             </section>
-            <section className='popularSongs'>
+            <section className='popularSongs world'>
                 <div className='popularSongsTitleWrap'>
                     <h3 className='market'>świat</h3>
                     <h3 className='description'>najpopularniejsze utwory tygodnia</h3>
