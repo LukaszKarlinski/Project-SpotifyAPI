@@ -1,3 +1,5 @@
+@use '../breakpoints';
+
 .wrapSearchArtistPage{
     min-height: 100vh;
     width: 100%;
@@ -6,4 +8,10 @@
     align-items: center;
     color: green;
     padding: 0 50px;
+}
+
+@media screen and (max-width: breakpoints.$breakpoint-s) {
+    .wrapSearchArtistPage{
+        padding: 0 20px;
+    }
 }

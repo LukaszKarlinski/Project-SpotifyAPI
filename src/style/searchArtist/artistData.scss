@@ -1,3 +1,5 @@
+@use '../breakpoints';
+
 .descriptionWrap{
     flex: 1;
     width: 80%;
@@ -85,4 +87,18 @@
         background-color: red;
     }
     
+}
+
+@media screen and (max-width: breakpoints.$breakpoint-l) {
+
+    .descriptionWrap{
+        width: 100%;
+    }
+    
+}
+
+@media screen and (max-width: breakpoints.$breakpoint-s) {
+    .descriptionWrap{
+        flex-direction: column;
+    }
 }

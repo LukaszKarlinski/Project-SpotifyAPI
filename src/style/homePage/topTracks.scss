@@ -1,9 +1,16 @@
+@use '../breakpoints';
+
 .topTracksWrap{
     flex: 1;
     display: flex;
 
     .top3Wrap, .restTracks{
-        width: 50%;      
+        width: 50%;
+        .trackInfo{
+            .trackName{
+                text-align: center;
+            }
+        }   
     }
 
     .top3Wrap{
@@ -43,12 +50,13 @@
                 flex-direction: column;
                 justify-content: center;
                 align-items: center;
-
+                padding-right: 10px;
                 .artistsWrap{
                     display: flex;
                     p{
                         font-size: 2rem;
                         margin-left: 5px;
+                        text-align: center;
                     }
                 }
             }
@@ -73,7 +81,7 @@
         .top2{
             flex-grow: 1;
                 .trackPosition{
-                    font-size: 7rem;
+                    font-size: 6rem;
                 }
             .imgWrap{
                 img{
@@ -82,7 +90,13 @@
             }
             .trackInfo{
                 .trackName{
-                    font-size: 3rem;
+                    font-size: 2.5rem;
+                }
+
+                .artistsWrap{
+                    p{
+                        font-size: 1.5rem;
+                    }
                 }
             }
         }
@@ -100,10 +114,18 @@
                 }
             }
             .trackInfo{
+                
                 .trackName{
                     font-size: 2rem;
                 }
+                .artistsWrap{
+                    p{
+                        font-size: 1.5rem;
+                    }
+                }
             }
+
+            
         }
     }
 
@@ -160,4 +182,168 @@
         }
     }
 
+}
+
+.loadingWrap{
+    flex: 1;
+}
+
+@media screen and ( max-width: breakpoints.$breakpoint-l) {
+
+    .topTracksWrap{
+        
+        .top3Wrap, .restTracks{
+            max-height: 90vh;
+            .track{
+                margin: 15px 0;
+            }
+        }
+
+        .top3Wrap{
+            .top1{
+                height: fit-content;
+                .trackPosition{
+                    font-size: 6rem;
+                }
+                .imgWrap{
+                    align-items: center;
+                    img{
+                        max-height: 100px;
+                    }
+                }
+
+                .trackInfo{
+                    .trackName{
+                        font-size: 3rem;
+                    }
+                    .artistsWrap{
+                        p{
+                            font-size: 1.5rem;
+                        }
+                    }
+                }
+            }
+
+            .top2{
+                height: fit-content;
+                .trackPosition{
+                    font-size: 4rem;
+                }
+                .imgWrap{
+                    align-items: center;
+                    img{
+                        max-height: 80px;
+                    }
+                }
+
+                .trackInfo{
+                    .trackName{
+                        font-size: 2rem;
+                    }
+                    .artistsWrap{
+                        p{
+                            font-size: 1.5rem;
+                        }
+                    }
+                }
+            }
+
+            .top3{
+                height: fit-content;
+                .trackPosition{
+                    font-size: 4rem;
+                }
+                .imgWrap{
+                    align-items: center;
+                    img{
+                        max-height: 70px;
+                    }
+                }
+
+                .trackInfo{
+                    .trackName{
+                        font-size: 2rem;
+                    }
+                    .artistsWrap{
+                        p{
+                            font-size: 1.2rem;
+                        }
+                    }
+                }
+            }
+        }
+
+        .restTracks{
+            .track{
+                margin: 5px 0;
+
+                .trackPositionWrap{
+                    padding: 0;
+                    .trackPosition{
+                        font-size: 2.5rem;
+                    }
+                }
+
+                .imgWrap{
+                    padding: 5px 0;
+                }
+            }
+        }
+    }
+}
+
+@media screen and (max-width: breakpoints.$breakpoint-m) {
+    .topTracksWrap{
+        .top3Wrap{
+            padding-left: 20px;
+        }
+
+        .restTracks{
+            padding: 10px 20px;
+        }
+    }
+}
+
+@media screen and (max-width: breakpoints.$breakpoint-s) {
+    .topTracksWrap{
+        flex-direction: column;
+        height: 90vh;
+
+        .top3Wrap, .restTracks{
+            width: 100%;
+            height: 40%;
+        }
+
+        .top3Wrap{
+            .track{
+                margin: 5px 0;
+            }
+        }
+
+        .restTracks{
+            height: 60%;
+            .track{
+                max-height: 13%;
+                .imgWrap{
+                    padding: 0;
+                }
+            }
+        }
+    }
+}
+
+@media screen and (max-width: breakpoints.$breakpoint-s) {
+    .topTracksWrap{
+
+        .top3Wrap,.restTracks{
+            padding: 0 5px;
+            .track{
+                .imgWrap{
+                    display: none;
+                }
+
+            }
+
+        }
+    }
 }

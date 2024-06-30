@@ -84,7 +84,7 @@ const TopTracks = ({tracks}) =>{
                     }
                 })}
             </div>
-        </div> : <p>loading</p>}
+        </div> : <div className='loadingWrap'><p>loading</p></div>}
         </>
         
     )

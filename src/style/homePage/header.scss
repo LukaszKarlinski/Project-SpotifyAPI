@@ -1,3 +1,5 @@
+@use '../breakpoints';
+
 .headerWrap{
     height: 100vh;
     width: 100%;
@@ -21,5 +23,27 @@
         text-align: center;
         letter-spacing: 3px;
         margin: 0 200px;
+    }
+}
+
+@media screen and ( max-width: breakpoints.$breakpoint-l) {
+    .headerWrap{
+        h1{
+            font-size: 5rem;
+        }
+        h2{
+            font-size: 1.5rem;
+        }
+    }
+}
+
+@media screen and (max-width: breakpoints.$breakpoint-xs) {
+    .headerWrap{
+        h1{
+            font-size: 3rem;
+        }
+        h2{
+            font-size: 1.2rem;
+        }
     }
 }
