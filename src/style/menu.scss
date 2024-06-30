@@ -1,11 +1,17 @@
+@use 'breakpoints';
+
 nav{
-    position: absolute;
+    position: fixed;
     top: 0;
     left: 0;
     margin-top: 50px;
 
     ul{
         list-style: none;
+
+        .mobileBar{
+            display: none;
+        }
         li{
             display: flex;
             width: fit-content;
@@ -23,10 +29,6 @@ nav{
             transform: translateX(calc(-100% + 55px));
             transition: .5s;
             z-index: 10;
-            &:hover{
-                transform: translateX(0);
-                box-shadow: 3px 3px 5px 0 green;
-            }
             
 
 
@@ -44,7 +46,14 @@ nav{
                 text-decoration: none;
                 
             }
-        }   
+        }
+
+        .menuItem{
+            &:hover{
+                transform: translateX(0);
+                box-shadow: 3px 3px 5px 0 green;
+            }
+        }
 
         li.selected{
             background-color: green;
@@ -57,6 +66,53 @@ nav{
             }
         }
     }
+}
 
+@media screen and (max-width: breakpoints.$breakpoint-s) {
+    nav{
+        width: 100%;
+        margin-top: 0;
+        ul{
+            width: 100%;
+            li{
+                width: 100%;
+                transform: translateX(-100%);
+                border-radius: 0;
+                text-align: center;
+                justify-content: center;
+                line-height: normal;
+                height: fit-content;
+                padding: 15px;
+                margin: 0;
+                .iconWrap{
+                    display: none;
+                }
 
+                &:hover{
+                    box-shadow: none;
+                }
+            }
+
+            .mobileBar{
+                display: flex;
+            }
+
+            .hide{
+                justify-content: flex-end;
+                transform: translateX(calc(-100% + 50px));
+            }
+
+            .show{
+                justify-content: flex-end;
+                transform: translateX(0);
+            }
+
+            .menuItem{
+                justify-content: center;
+            }
+            .menuItem.hide{
+                transform: translateX(-100%);
+            }
+        }
+    }
 }
