@@ -15,6 +15,9 @@ const setUrl = (type, value, options) =>{
     if(type==='search'){
         url = `${urlCore}search?q=${value}&type=artist&market=PL&limit=1`;
     }
+    else if(type==='recommendations' && value===' '){
+        url = `${urlCore}${type}?${options}`;
+    }
     else{
         if(!options)
             url = `${urlCore}${type}/${value}`;

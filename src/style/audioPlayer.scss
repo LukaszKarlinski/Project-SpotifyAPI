@@ -1,3 +1,5 @@
+@use 'breakpoints';
+
 .audioPlayerWrap{
     width: 100%;
         display: flex;
@@ -39,4 +41,18 @@
                 
             }
         }
+}
+
+.noPreview{
+    font-size: 1.5rem;
+    text-transform: uppercase;
+    font-weight: 700;
+}
+
+@media screen and (max-width: breakpoints.$breakpoint-xs) {
+    .audioPlayerWrap{
+        .progressContainer{
+            width: 70%;
+        }
+    }
 }

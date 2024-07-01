@@ -1,7 +1,7 @@
 import { useEffect, useRef, useState } from 'react';
 import '../style/audioPlayer.scss';
 
-import { IconPlayerPlayFilled } from '@tabler/icons-react';
+import { IconH1, IconPlayerPlayFilled } from '@tabler/icons-react';
 import { IconPlayerPauseFilled } from '@tabler/icons-react';
 
 const AudioPlayer = ({url}) =>{
@@ -47,9 +47,19 @@ const AudioPlayer = ({url}) =>{
         return () => cancelAnimationFrame(animationFrameId);
     }, [isPlaying]);
 
+    useEffect(()=>{
+        if(audioRef.current){
+            audioRef.current.pause();
+            audioRef.current.load();
+            setIsPlaying(false);
+            setAudioProgress('0%');
+        }
+    },[url])
+
     return(
-        <div className='audioPlayerWrap'>
-            <audio ref={audioRef}>
+        <>
+        {url ? <div className='audioPlayerWrap'>
+                <audio ref={audioRef}>
                     {url ? <source  src={url} type='audio/mpeg'/> :<p>brak podlądu utworu</p>}
                 </audio>
 
@@ -59,7 +69,8 @@ const AudioPlayer = ({url}) =>{
                 <div className="controls">
                     <button onClick={handleAudio}>{isPlaying? <div className="iconWrap"><IconPlayerPauseFilled size={40}/></div>: <div className="iconWrap"><IconPlayerPlayFilled size={40}/></div> }</button>
                 </div>
-        </div>
+        </div> : <p className='noPreview'>brak podglądu dla tego utworu</p>}
+        </>
     )
 }
 
