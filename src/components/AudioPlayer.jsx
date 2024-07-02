@@ -1,11 +1,11 @@
 import { useEffect, useRef, useState } from 'react';
 import '../style/audioPlayer.scss';
-
-import { IconH1, IconPlayerPlayFilled } from '@tabler/icons-react';
 import { IconPlayerPauseFilled } from '@tabler/icons-react';
 
 const AudioPlayer = ({url}) =>{
 
+
+    //handle start and pause track
     const audioRef = useRef(null);
 
     const [isPlaying, setIsPlaying] = useState(false);
@@ -20,6 +20,7 @@ const AudioPlayer = ({url}) =>{
             audioRef.current.pause();
     }
 
+    //calculate track progress
     const [audioProgress, setAudioProgress] = useState('0%');
 
     const calculateProgress = () =>{
@@ -30,6 +31,7 @@ const AudioPlayer = ({url}) =>{
         setAudioProgress(`${progress}%`);
     }
 
+    //progress bar animation
     useEffect(() => {
         let animationFrameId;
         
@@ -47,6 +49,7 @@ const AudioPlayer = ({url}) =>{
         return () => cancelAnimationFrame(animationFrameId);
     }, [isPlaying]);
 
+    //handle track change
     useEffect(()=>{
         if(audioRef.current){
             audioRef.current.pause();

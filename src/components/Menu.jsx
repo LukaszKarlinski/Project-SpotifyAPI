@@ -11,9 +11,9 @@ const Menu = () =>{
     const location = useLocation();
     const currentPath = location.pathname;
 
+
+    //handle mobile version of menu
     const [showMenu, setShowMenu] = useState(false);
-
-
     const handleMenuBar = () =>{
         setShowMenu(!showMenu);
     }
