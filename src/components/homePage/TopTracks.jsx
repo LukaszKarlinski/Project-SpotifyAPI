@@ -13,7 +13,7 @@ const TopTracks = ({tracks}) =>{
                         <h3 className='trackPosition'>1</h3>
                     </div>
                     <div className='imgWrap'>
-                        <img src={tracks[0].album.images[1].url} alt="" />
+                        <img src={tracks[0].album.images[1].url} alt={tracks[0].album.name} />
                     </div>
                     
                     <div className='trackInfo'>
@@ -31,7 +31,7 @@ const TopTracks = ({tracks}) =>{
                     </div>
 
                     <div className='imgWrap'>
-                        <img src={tracks[1].album.images[1].url} alt="" />
+                        <img src={tracks[1].album.images[1].url} alt={tracks[1].album.name} />
                     </div>
 
                     <div className='trackInfo'>
@@ -51,7 +51,7 @@ const TopTracks = ({tracks}) =>{
                     </div>
 
                     <div className='imgWrap'>
-                        <img src={tracks[2].album.images[1].url} alt="" />
+                        <img src={tracks[2].album.images[1].url} alt={tracks[2].album.name} />
                     </div>
 
                     <div className='trackInfo'>
@@ -60,7 +60,6 @@ const TopTracks = ({tracks}) =>{
                             {tracks[2].artists.map((artist, index) => (<p key={index}>{artist.name}</p>))}  
                         </div>
                     </div>
-
                 </div>
 
             </div>
@@ -71,7 +70,7 @@ const TopTracks = ({tracks}) =>{
                             <div key={index} className='track'>
                                 <div className='trackPositionWrap'><h3 className='trackPosition'>{index+1}</h3></div>
                                 <div className="imgWrap">
-                                    <img src={track.album.images[2].url} alt="" />
+                                    <img src={track.album.images[2].url} alt={track.album.name} />
                                 </div>
                                 <div className='trackInfo'>
                                     <h4 className='trackName'>{track.name}</h4>

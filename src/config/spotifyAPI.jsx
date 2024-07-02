@@ -1,11 +1,5 @@
-import accessToken from "./apiKeys";
+import getAccessToken from "./apiKeys";
 
-
-const authorization = {
-    headers:{
-        'Authorization': 'Bearer ' + accessToken,
-    }
-}
 
 const setUrl = (type, value, options) =>{
 
@@ -31,6 +25,20 @@ const setUrl = (type, value, options) =>{
 const fetchData = async (type, value, options='') =>{
 
     const url = setUrl(type, value, options);
+    const accessToken = await getAccessToken();
+
+    if(!accessToken){
+        console.error('Access token not available');
+        return null;
+    }
+    
+    console.log(accessToken);
+
+    const authorization = {
+        headers: {
+            'Authorization' : 'Bearer ' + accessToken,
+        }
+    }
 
     try{
         const response = await fetch(url, authorization);
