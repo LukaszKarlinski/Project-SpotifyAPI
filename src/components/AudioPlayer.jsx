@@ -54,6 +54,8 @@ const AudioPlayer = ({url}) =>{
             setIsPlaying(false);
             setAudioProgress('0%');
         }
+
+        audioRef.current && audioRef.current.addEventListener('ended', ()=>{setIsPlaying(false); audioRef.current.currentTime=0});
     },[url])
 
     return(
@@ -67,7 +69,7 @@ const AudioPlayer = ({url}) =>{
                     <div className='progress' style={{width: audioProgress}}></div>
                 </div>
                 <div className="controls">
-                    <button onClick={handleAudio}>{isPlaying? <div className="iconWrap"><IconPlayerPauseFilled size={40}/></div>: <div className="iconWrap"><IconPlayerPlayFilled size={40}/></div> }</button>
+                    <button onClick={handleAudio}>{isPlaying? <div className="iconWrap"><IconPlayerPauseFilled size={35}/></div>: <div className="iconWrap"><IconPlayerPlayFilled size={35}/></div> }</button>
                 </div>
         </div> : <p className='noPreview'>brak podglądu dla tego utworu</p>}
         </>

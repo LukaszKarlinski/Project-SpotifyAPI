@@ -4,7 +4,7 @@ nav{
     position: fixed;
     top: 0;
     left: 0;
-    margin-top: 50px;
+    margin-top: 10px;
 
     ul{
         list-style: none;
@@ -28,7 +28,6 @@ nav{
             border-radius: 0 50px 50px 0;
             transform: translateX(calc(-100% + 55px));
             transition: .5s;
-            z-index: 10;
             
 
 

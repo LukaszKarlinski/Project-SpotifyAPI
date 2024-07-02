@@ -1,0 +1,149 @@
+@use '../breakpoints';
+
+.recommendationForm{
+    width: 100%;
+    display: flex;
+    justify-content: space-evenly;
+
+    input[type="number"]::-webkit-outer-spin-button,
+    input[type="number"]::-webkit-inner-spin-button {
+        -webkit-appearance: none;
+        margin: 0;
+    }
+    input[type="number"] {
+        -moz-appearance: textfield;
+    }
+
+    form{
+        height: 100%;
+        width: 100%;
+        display: flex;
+        justify-content: center;
+        align-items: flex-end;
+        flex-wrap: wrap;
+
+        .inputsWrap{
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: space-evenly;
+            gap: 40px;
+            .inputWrap{
+                h2{
+                    font-weight: 600;
+                    margin: 10px 0;
+                    text-align: center;
+                    text-transform: uppercase;
+                }
+                input{
+                    margin: auto;
+                    display: block;
+                    width: 100%;
+                    padding: 10px 20px;
+                    border-radius: 20px;
+                    border: none;
+                    outline: none;
+                    letter-spacing: 1px;
+                    font-size: 1.8rem;
+                    color: green;
+                    background-color: #222;
+                    font-weight: 600;
+                }
+                .genreInputWrap{
+                    position: relative;
+                    .matchingGenresWrap{
+                        position: absolute;
+                        left: 0;
+                        right: 0;
+                        z-index: 2;
+                        display: flex;
+                        flex-direction: column;
+
+                        .matchingGenre{
+                            padding: 10px 20px;
+                            border-radius: 20px;
+                            letter-spacing: 1px;
+                            font-size: 1.8rem;
+                            background-color: green;
+                            color: black;
+                            border: 2px solid black;
+                            font-weight: 500;
+                            cursor: pointer;
+                        }
+                    }
+                }
+            }
+
+            .numberValue{
+                flex: 0;
+                input{
+                    width: 70px;
+                    text-align: center;
+                }
+            }
+
+        }  
+        button{
+            height: 50%;
+            padding: 10px 20px;
+            margin: 0 30px;
+            border-radius: 20px;
+            font-size: 1.8rem;
+            font-weight: 700;
+            text-transform: uppercase;
+            background-color: green;
+            color: black;
+            border: none;
+            cursor: pointer;
+            transition: .3s;
+            &:hover{
+                box-shadow: 0 0 5px 2px green;
+            }
+        }
+    }   
+}
+
+@media screen and (max-width: breakpoints.$breakpoint-m){
+    .recommendationForm{
+        form{
+            .inputsWrap{
+                gap: 20px;
+            }
+            button{
+                margin-top: 20px;
+            }
+        }
+    }
+}
+
+@media screen and (max-width: breakpoints.$breakpoint-s) {
+    .recommendationForm{
+        form{
+            .inputsWrap{
+                .inputWrap{
+                    h2{
+                        font-size: 1.4rem;
+                    }
+                    input{
+                        padding: 8px 10px;
+                        letter-spacing: 0;
+                        font-size: 1.4rem;
+                    }
+                    .genreInputWrap{
+                        .matchingGenresWrap{
+                            .matchingGenre{
+                                padding: 5px 10px;
+                                letter-spacing: 0;
+                                font-size: 1.4rem;
+                            }
+                        }
+                    }
+                }
+            }
+            button{
+                padding: 10px 15px;
+                letter-spacing: 0;
+                font-size: 1.4rem;
+            }
+        }
+    }
+}

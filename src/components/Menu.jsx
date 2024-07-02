@@ -1,6 +1,7 @@
 import { IconHomeFilled } from '@tabler/icons-react';
 import { IconSearch } from '@tabler/icons-react';
 import { IconMenu2 } from '@tabler/icons-react';
+import { IconMusic } from '@tabler/icons-react';
 import { Link, useLocation } from 'react-router-dom';
 import '../style/menu.scss';
 import { useState } from 'react';
@@ -32,6 +33,12 @@ const Menu = () =>{
                         <Link to='/searchArtist'>Znajdź artyste</Link>
                         <div className="iconWrap">
                             <IconSearch size={30}/>
+                        </div>
+                </li>
+                <li className={`${currentPath === '/recommendedTrack'? 'selected menuItem': 'menuItem'} ${showMenu? 'show' : 'hide'}`}>
+                        <Link to='/recommendedTrack'>Poznaj nowe utowry</Link>
+                        <div className="iconWrap">
+                            <IconMusic stroke={1.7} size={30}/>
                         </div>
                 </li>
             </ul>
