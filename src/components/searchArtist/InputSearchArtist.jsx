@@ -4,6 +4,8 @@ import fetchData from '../../config/spotifyAPI';
 
 const InputSearchArtist = ({setArtistData}) =>{
 
+    //handle form
+
     const [inputValue, setInputValue] = useState('');
 
     const handleInputChange = (e) =>{
@@ -22,6 +24,7 @@ const InputSearchArtist = ({setArtistData}) =>{
             <h1>Znajdź artystę</h1>
             <form onSubmit={handleSubmit}>
                 <input type="text" className='artistSearchInput' value={inputValue} onChange={handleInputChange}/>
+                <button>szukaj</button>
             </form>
         </div>
     )

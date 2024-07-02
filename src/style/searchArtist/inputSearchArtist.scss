@@ -11,22 +11,42 @@
         text-transform: uppercase;
         letter-spacing: 3px;
     }
-    .artistSearchInput{ 
-        display: block;
-        width: 33%;
-        margin: auto;
-        margin-bottom: 30px;
-        font-size: 2rem;
-        padding: 10px 20px;
-        border-radius: 50px;
-        border: none;
-        outline: none;
-        border-bottom: 5px solid green;
 
-        &:focus{
-            box-shadow: 0 0 10px 3px green;
+    form{
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        margin-bottom: 30px;
+        .artistSearchInput{ 
+            background-color: #222;
+            color: green;
+            display: block;
+            width: 33%;
+            font-size: 2rem;
+            padding: 10px 20px;
+            border-radius: 50px;
+            border: none;
+            outline: none;
+            border-bottom: 5px solid green;
+    
+            &:focus{
+                box-shadow: 0 0 10px 3px green;
+            }
         }
-        
+
+        button{
+            height: fit-content;
+            padding: 10px 20px;
+            margin-left: 20px;
+            border-radius: 30px;
+            font-size: 1.6rem;
+            text-transform: uppercase;
+            font-weight: 600;
+            border: none;
+            background-color: green;
+            color: black;
+            cursor: pointer;
+        }
     }
 }
 

@@ -17,7 +17,6 @@ const SearchArtistPage = () =>{
         const fetchTracks = async () =>{
             const data = await fetchData('artists', artistData.id, 'top-tracks?market=PL&limit=5');
             setTopTracks(data.tracks);
-            console.log(data);
         }
         if(artistData.id)
             fetchTracks();
