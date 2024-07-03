@@ -1,8 +1,19 @@
-# React + Vite
+# Project-SpotifyAPI
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+Strona dostępna pod adresem: [lukaszkarlinski.github.io/Project-SpotifyAPI/](https://lukaszkarlinski.github.io/Project-SpotifyAPI/)
 
-Currently, two official plugins are available:
+Aplikacja została stowrzona w React, wykorzystuje Spotify API do pobierania informacji o utworach i artystach.
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react/README.md) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+## Opis
+
+Funkcje:
+- sprawdzenie rekomendowanego utworu, wraz z próbką muzyczną jeśli taka jest przypisana do utworu.
+- przegląd najpopularniejszych utworów tygodnia w polsce i na świecie.
+- wyszukanie i sprawdzenie szczegółowych informacji o artyście.
+- wyszukanie polecanego utworu z możliwością wyboru kryteriów.
+
+## Wykorzystane technologie:
+- React
+- React Router
+
+
