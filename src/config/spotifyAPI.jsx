@@ -32,7 +32,6 @@ const fetchData = async (type, value, options='') =>{
         return null;
     }
     
-    console.log(accessToken);
 
     const authorization = {
         headers: {

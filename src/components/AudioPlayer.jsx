@@ -1,6 +1,7 @@
 import { useEffect, useRef, useState } from 'react';
 import '../style/audioPlayer.scss';
 import { IconPlayerPauseFilled } from '@tabler/icons-react';
+import { IconPlayerPlayFilled } from '@tabler/icons-react';
 
 const AudioPlayer = ({url}) =>{
 
