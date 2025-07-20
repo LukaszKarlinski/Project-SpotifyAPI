@@ -1,6 +1,5 @@
 # Project-SpotifyAPI
 
-Strona dostępna pod adresem: [lukaszkarlinski.github.io/Project-SpotifyAPI/](https://lukaszkarlinski.github.io/Project-SpotifyAPI/)
 
 Aplikacja została stowrzona w React, wykorzystuje Spotify API do pobierania informacji o utworach i artystach.
 
